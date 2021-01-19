@@ -20,7 +20,7 @@
   },
   "build": {
     "mac": {
-      "target": "zip"
+      "target": "pkg"
     },
     "win": {
       "target": "zip"

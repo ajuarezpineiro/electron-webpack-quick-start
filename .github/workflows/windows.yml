@@ -1,5 +1,7 @@
   
 on: [push]
+  branches: 
+    - windows
 
 jobs:
   k6_local_test:
