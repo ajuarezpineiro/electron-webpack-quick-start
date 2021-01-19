@@ -1,0 +1,20 @@
+  
+on: [push]
+
+jobs:
+  k6_local_test:
+    name: build electron app
+    runs-on: macos-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Install k6 by homebrew
+        run: brew install npm
+
+      - name: Local k6 test
+        run: npm install
+
+      - name: build electron
+        run: npm run dist:dir
