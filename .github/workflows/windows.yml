@@ -4,17 +4,11 @@ on: [push]
 jobs:
   k6_local_test:
     name: build electron app for win
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
 
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-
-      - name: Install npm
-        run: brew install npm
-
-      - name: Install yarn
-        run: brew install yarn
 
       - name: Yarn
         run: yarn
@@ -23,4 +17,9 @@ jobs:
         run: yarn win
 
       - name: list build dir
-        run: ls dist/win
+        run: dir dist
+      
+      - uses: actions/upload-artifact@v2
+        with:
+          name: electron-quick-win.zip
+          path: dist\electron-webpack-quick-start-0.0.0-win.zip
