@@ -4,7 +4,7 @@ on: [push]
 jobs:
   k6_local_test:
     name: build electron app
-    runs-on: macos-latest
+    runs-on: ubuntu-latest
 
     steps:
       - name: Checkout
@@ -20,7 +20,7 @@ jobs:
         run: yarn
 
       - name: build electron
-        run: yarn dist:dir
+        run: yarn win
 
       - name: list build dir
-        run: ls dist/mac
+        run: ls dist/win
