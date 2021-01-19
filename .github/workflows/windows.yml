@@ -3,7 +3,7 @@ on: [push]
 
 jobs:
   k6_local_test:
-    name: build electron app
+    name: build electron app for win
     runs-on: ubuntu-latest
 
     steps:
