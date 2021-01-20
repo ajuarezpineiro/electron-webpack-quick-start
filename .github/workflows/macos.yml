@@ -20,7 +20,7 @@ jobs:
         run: yarn
 
       - name: build electron
-        run: yarn dist:dir
+        run: yarn mac
 
       - name: list build dir
         run: ls dist/mac

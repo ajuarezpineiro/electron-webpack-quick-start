@@ -7,7 +7,8 @@
     "compile": "electron-webpack",
     "dist": "yarn compile && electron-builder",
     "dist:dir": "yarn dist --dir -c.compression=store -c.mac.identity=null",
-    "win": "yarn compile && electron-builder -w"
+    "win": "yarn compile && electron-builder -w",
+    "mac": "yarn compile && electron-builder -m"
   },
   "dependencies": {
     "source-map-support": "^0.5.16"
@@ -20,7 +21,7 @@
   },
   "build": {
     "mac": {
-      "target": "pkg"
+      "target": "dmg"
     },
     "win": {
       "target": "zip"
